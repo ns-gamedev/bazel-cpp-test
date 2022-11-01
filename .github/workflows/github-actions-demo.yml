@@ -16,7 +16,11 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: bazel build //main:hello-world
+      - uses: actions/cache@v3
+        with:
+          path: bazelcache
+          key: bazelcache 
+      - run: bazel build //main:hello-world --disk_cache=bazelcache
       - run: echo "Build has been completed!"
       - run: echo "Running the output application"
       - run: bazel-bin/main/hello-world
