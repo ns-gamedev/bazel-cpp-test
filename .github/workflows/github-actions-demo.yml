@@ -21,7 +21,4 @@ jobs:
           path: bazelcache
           key: bazelcache 
       - run: bazel build //main:hello-world-wasm --disk_cache=bazelcache
-      - run: echo "Build has been completed!"
-      - run: echo "Running the output application"
-      - run: bazel-bin/main/hello-world
       - run: echo "🍏 This job's status is ${{ job.status }}."
