@@ -21,3 +21,4 @@ jobs:
       - run: echo "Running the output application"
       - run: bazel-bin/main/hello-world
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: cat ~/.bazelrc
