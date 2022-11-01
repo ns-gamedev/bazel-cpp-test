@@ -1,8 +1,8 @@
-name: GitHub Actions Demo
+name: GitHub Actions Test with Bazel
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Build Main With Bazel:
     runs-on: ubuntu-latest
     steps:
       - run: bazel version
@@ -16,4 +16,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - run: bazel build //main:hello-world
+      - run: echo "Build has been completed!"
+      - run: echo "Running the output application"
+      - run: bazel-bin/main/hello-world
       - run: echo "🍏 This job's status is ${{ job.status }}."
