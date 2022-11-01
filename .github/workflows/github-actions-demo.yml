@@ -2,7 +2,7 @@ name: GitHub Actions Test with Bazel
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Build Main With Bazel:
+  Build-Main-With-Bazel:
     runs-on: ubuntu-latest
     steps:
       - run: bazel version
