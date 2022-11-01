@@ -33,3 +33,4 @@
 bazel-bazel-cpp-test/*
 bazel-bin/*
 bazel-out/*
+examples/*
