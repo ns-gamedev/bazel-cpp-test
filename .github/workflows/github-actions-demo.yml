@@ -20,7 +20,7 @@ jobs:
         with:
           path: bazelcache
           key: bazelcache 
-      - run: bazel build //main:hello-world --disk_cache=bazelcache
+      - run: bazel build //main:hello-world-wasm --disk_cache=bazelcache
       - run: echo "Build has been completed!"
       - run: echo "Running the output application"
       - run: bazel-bin/main/hello-world
