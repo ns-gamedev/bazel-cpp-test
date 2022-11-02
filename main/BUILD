@@ -8,14 +8,15 @@ cc_library(
 )
 
 cc_binary(
-    name = "main",
+    name = "hello-main",
     srcs = ["hello-world.cc"],
     deps = [
         ":hello-greet",
+        "//lib:hello-time",
     ],
 )
 
 wasm_cc_binary(
-    name = "main-wasm",
-    cc_target = ":main",
+    name = "hello-main-wasm",
+    cc_target = ":hello-main",
 )
