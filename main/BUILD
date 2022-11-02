@@ -15,8 +15,8 @@ cc_binary(
         ":hello-greet",
         "//lib:hello-time",
     ],
-    linkopts = ["-sWASM=2"],
-    copts = ["-flto"]
+    linkopts = ["-s WASM=2"],
+    copts = ["-flto", "-s USE_SDL=2"]
 )
 
 wasm_cc_binary(
