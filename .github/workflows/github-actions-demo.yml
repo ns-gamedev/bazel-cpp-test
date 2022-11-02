@@ -20,5 +20,5 @@ jobs:
         with:
           path: bazelcache
           key: bazelcache 
-      - run: bazel build //main:hello-main-wasm --disk_cache=bazelcache
+      - run: bazel build //main:wasm-binary-target --disk_cache=bazelcache
       - run: echo "🍏 This job's status is ${{ job.status }}."
